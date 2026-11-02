@@ -206,6 +206,7 @@ footer .wrap{padding-block:32px;display:flex;flex-wrap:wrap;justify-content:spac
 
 .hero .credit{justify-self:end;margin-top:12px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.04em;color:var(--bois-muted);text-shadow:0 1px 2px rgba(0,0,0,.5)}
 
+.split {gap: 0;} //CKX
 .split .split-img{margin:-28px -28px 10px;aspect-ratio:3/2;max-width:none;overflow:hidden;background:var(--line)}
 .split .split-img img{display:block;width:100%;height:100%;object-fit:cover}
 
