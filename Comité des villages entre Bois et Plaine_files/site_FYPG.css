@@ -21,11 +21,11 @@
   --font-quote: "Inria Serif", Georgia, "Times New Roman", serif;
 
 }
-@media (prefers-color-scheme: dark){
+/* @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#101612; --surface:#18201B; --ink:#E3E9E2; --muted:#9BA89F; --line:#2B372F;
     --bois:#0B1910; --bois-ink:#E3E9E2; --bois-muted:#8FA596;
-    --canopy:#1E3D2B; --canopy-2:#264B35; --field:#3B3521; --field-2:#D6C690; --furrow:#8C6A2B; /* CKX --field-2:#D6C690; */
+    --canopy:#1E3D2B; --canopy-2:#264B35; --field:#3B3521; --field-2:#D6C690; --furrow:#8C6A2B; 
     --ble:#D9A84C; --pierre:#95A4AD; color-scheme:dark;
   }
 }
@@ -34,7 +34,7 @@
   --bois:#0B1910; --bois-ink:#E3E9E2; --bois-muted:#8FA596;
   --canopy:#1E3D2B; --canopy-2:#264B35; --field:#3B3521; --furrow:#8C6A2B;
   --ble:#D9A84C; --pierre:#95A4AD; color-scheme:dark;
-}
+} */
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.6}
