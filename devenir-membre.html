@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Devenir membre · Comité des villages entre Bois et Plaine</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inria+Serif:ital,wght@1,300&display=swap">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="img/logo/favicon-64.png">
+<link rel="apple-touch-icon" href="img/logo/favicon-180.png">
+
+<link rel="stylesheet" href="site.css">
+
+<style>
+:root {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+
+.crumbs {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .06em;
+  color: var(--bois-muted);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.crumbs a { color: var(--bois-muted); }
+.crumbs a:hover { color: var(--bois-ink); }
+
+.page-hero {
+  padding-block: 40px 56px;
+  display: grid;
+  gap: 16px;
+}
+.page-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+}
+.page-hero .lead {
+  max-width: 56ch;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--bois-ink);
+  opacity: .92;
+}
+</style>
+
+<script src="nav.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="index.html">
+        <img
+          class="brand-logo"
+          src="img/logo/cvbp-logo-sombre.png"
+          alt="Comité des villages entre Bois et Plaine"
+          width="930"
+          height="232">
+      </a>
+
+      <nav class="nav" aria-label="Sections">
+        <a href="index.html#mission">Raison d'être</a>
+        <a href="index.html#territoire">Territoire</a>
+        <a href="index.html#dossiers">Dossiers</a>
+        <a href="index.html#rejoindre" class="is-current">Participer &amp; soutenir</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <div class="page-hero">
+      <div class="crumbs">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html#rejoindre">Participer &amp; soutenir</a>
+        <span aria-hidden="true">/</span>
+        <span>Devenir membre</span>
+      </div>
+
+      <h1>Devenir membre</h1>
+      <p class="lead">Devenez membre adhérent&nbsp;: vous soutenez l'action des habitants de Barry, Gaurain-Ramecroix, Vezon, Baugnies et Wasmes-Audemez-Briffœil pour le bien-être de leurs villages, et vous recevez nos informations en priorité. Le formulaire prend une minute.</p>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="wrap form-wrap">
+      <form
+        class="adhesion"
+        id="adhesion"
+        method="POST"
+        action="https://api.web3forms.com/submit">
+
+        <input type="hidden" name="access_key" value="3895966a-8052-4f39-9360-efd471f9cc78">
+        <input type="hidden" name="subject" value="Nouvelle demande d'adhésion (membre adhérent)">
+        <input type="hidden" name="from_name" value="Site entreboisetplaine.be">
+        <input type="hidden" name="redirect" value="https://www.entreboisetplaine.be/merci.html">
+        <input type="hidden" name="type" value="Membre adhérent">
+
+        <p class="hp">
+          <label>Ne pas remplir&nbsp;:
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+          </label>
+        </p>
+
+        <fieldset>
+          <legend>Vos coordonnées</legend>
+
+          <div class="row">
+            <label class="field" for="prenom">
+              Prénom
+              <input type="text" id="prenom" name="prenom" autocomplete="given-name" required>
+            </label>
+
+            <label class="field" for="nom">
+              Nom
+              <input type="text" id="nom" name="nom" autocomplete="family-name" required>
+            </label>
+          </div>
+
+          <div class="row">
+            <label class="field" for="email">
+              E-mail
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </label>
+
+            <label class="field" for="village">
+              <span>Village <span class="opt">(facultatif)</span></span>
+              <select id="village" name="village">
+                <option value="" selected>Choisissez</option>
+                <option>Barry</option>
+                <option>Gaurain-Ramecroix</option>
+                <option>Vezon</option>
+                <option>Baugnies</option>
+                <option>Wasmes-Audemez-Briffœil</option>
+                <option>Autre localité</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Vos engagements</legend>
+
+          <div class="form-info">
+            <p>L'organe d'administration examine chaque demande. La cotisation annuelle des membres adhérents est fixée par l'assemblée générale et ne dépasse jamais 50&nbsp;€. Nous vous communiquerons son montant et les modalités de paiement après votre admission.</p>
+          </div>
+
+          <label class="consent" for="c-statuts">
+            <input
+              type="checkbox"
+              id="c-statuts"
+              name="adhesion-au-but"
+              value="oui"
+              required>
+            <span>J'adhère au but de l'association et je m'engage à respecter ses statuts.</span>
+          </label>
+
+          <label class="consent" for="c-donnees">
+            <input
+              type="checkbox"
+              id="c-donnees"
+              name="accord-donnees"
+              value="oui"
+              required>
+            <span>J'accepte que l'association conserve ces informations pour gérer mon adhésion et me tenir informé·e de ses activités.</span>
+          </label>
+
+          <div class="privacy-note">
+            <p>Nous ne demandons que le strict nécessaire. Vos données sont réservées aux administrateurs de l'association. Elles ne sont jamais publiées ni transmises à des tiers, et sont supprimées à la fin de votre adhésion. Vous pouvez à tout moment les consulter, les faire corriger ou supprimer en écrivant à <a href="mailto:contact@entreboisetplaine.be">contact@entreboisetplaine.be</a>.</p>
+            <p>Le formulaire nous est transmis par e-mail via le service Web3Forms.</p>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="btn btn-dark" type="submit" id="envoyer">
+            Envoyer ma demande
+          </button>
+
+          <p class="form-status" id="form-status" role="status" hidden></p>
+
+          <a href="index.html#rejoindre">Retour à l'accueil</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="legal">
+      <strong>Comité des villages entre Bois et Plaine ASBL</strong>
+      <span>Siège&nbsp;: rue Albert Ier 51ter, 7538 Vezon</span>
+      <span>N° d'entreprise 1044.404.047 · RPM Hainaut, division Tournai</span>
+      <span>Compte&nbsp;: communiqué à l'ouverture · contact@entreboisetplaine.be · www.entreboisetplaine.be</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Envoi du formulaire sans quitter la page, puis redirection.
+(function () {
+  var form = document.getElementById('adhesion');
+  var btn = document.getElementById('envoyer');
+  var status = document.getElementById('form-status');
+
+  if (!form || !window.fetch || !window.FormData) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours…';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error('Erreur HTTP');
+        return r.json();
+      })
+      .then(function (data) {
+        if (data && data.success) {
+          window.location.href = 'merci.html';
+          return;
+        }
+        throw new Error((data && data.message) || 'Erreur');
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Envoyer ma demande';
+        status.textContent = "L'envoi n'a pas abouti. Réessayez dans un instant, ou écrivez-nous directement à contact@entreboisetplaine.be.";
+        status.hidden = false;
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
