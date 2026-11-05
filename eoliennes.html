@@ -9,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inria+Serif:ital,wght@1,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Next:wght@500;600;800&family=IBM+Plex+Mono:wght@400;500&family=Inria+Serif:ital,wght@1,300&display=swap">
 
 <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="img/logo/favicon-64.png">
@@ -23,7 +23,8 @@
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 body { margin: 0; }
-img { max-width: 100%; }
+img { max-width: 100%; }Fbref
+
 [hidden] { display: none !important; }
 
 .crumbs {
@@ -201,6 +202,7 @@ img { max-width: 100%; }
   position: relative;
   max-width: 820px;
 }
+.timeline p + p { margin-top: 10px; }
 .timeline li {
   display: grid;
   grid-template-columns: 10rem 28px minmax(0, 1fr);
@@ -245,8 +247,31 @@ img { max-width: 100%; }
   gap: 6px;
   min-width: 0;
 }
-.what h3 { font-size: 1.25rem; }
+.what h3 { font-size: 1.30rem;padding-bottom:10px }
 .what p { color: var(--muted); }
+
+.what b { font-family: "Atkinson Hyperlegible Next", sans-serif;font-weight: 600; }
+.what strong { font-family: "Atkinson Hyperlegible Next", sans-serif;font-weight: 800; }
+
+/* normal bulleted list */
+.what ul {
+  list-style: disc;
+  margin: 12px 0 0 0;
+  padding-left: 24px;
+}
+
+.what ul li {
+  display: list-item;
+  list-style: disc;
+  color: var(--muted);
+  padding: 0 0 8px 0;
+  margin: 0;
+}
+
+.what ul li::before,
+.what ul li::after {
+  content: none;
+}
 
 .timeline .now .node {
   background: var(--ble);
@@ -319,7 +344,7 @@ img { max-width: 100%; }
 }
 :root[data-theme="dark"] .pill.perm { color: #7FB08F; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .pill.perm { color: #7FB08F; }
+ &nbsp;:root:not([data-theme="light"]) .pill.perm { color: #7FB08F; }
 }
 
 .cta-band { background: var(--field); }
@@ -394,13 +419,8 @@ img { max-width: 100%; }
         <span>Projet éolien</span>
       </div>
 
-      <h1>Le projet éolien de Barry-Vezon</h1>
-      <p class="lead">
-        En septembre 2026, le Ministre wallon a autorisé 7 des 8 éoliennes demandées
-        par la CCB et l'intercommunale IPALLE, entre Barry et Vezon.
-        Voici le dossier tel que nous le suivons, étape par étape.
-      </p>
-      <span class="status">Permis octroyé · septembre 2026</span>
+      <h1>Sept éoliennes de 230&nbsp;mètres entre Barry et Vezon</h1>
+      <p class="lead">Porté par la CCB et IPALLE, le projet prévoit l’implantation de sept éoliennes de 230 mètres de haut, en milieux agricoles et forestiers, notamment au sein et aux abords du bois de Barry. Initialement prévu pour huit éoliennes, le projet a été partiellement refusé en mars 2026, avant d’être largement autorisé par le ministre en septembre, malgré la proposition de refus de l’administration wallonne sur recours.
     </div>
   </div>
 </div>
@@ -414,10 +434,10 @@ img { max-width: 100%; }
       </div>
 
       <div class="facts">
-        <div><strong>8</strong><span>éoliennes demandées</span></div>
-        <div><strong>7</strong><span>éoliennes autorisées en septembre 2026</span></div>
-        <div><strong>230&nbsp;m</strong><span>de hauteur totale, en bout de pale</span></div>
-        <div><strong>2</strong><span>porteurs de projet&nbsp;: la CCB et IPALLE</span></div>
+        <div><b>8</b><span>éoliennes demandées</span></div>
+        <div><b>7</b><span>éoliennes autorisées en septembre 2026</span></div>
+        <div><b>230&nbsp;m</b><span>de hauteur totale, en bout de pale</span></div>
+        <div><b>2</b><span>porteurs de projet&nbsp;: la CCB et IPALLE</span></div>
       </div>
 
       <div class="map-block">
@@ -436,14 +456,14 @@ img { max-width: 100%; }
             <li>
               <i class="ring first" aria-hidden="true"></i>
               <div>
-                <b>Autorisées dès la première instance</b>
+                <b>Quatre éoliennes Autorisées en première instance</b>
                 <span>n° 2, 4, 5 et 6 · mars 2026</span>
               </div>
             </li>
             <li>
               <i class="ring added" aria-hidden="true"></i>
               <div>
-                <b>Ajoutées par le Ministre sur recours</b>
+                <b>Trois éoliennes ajoutées par le Ministre sur recours</b>
                 <span>n° 1, 7 et 8 · septembre 2026</span>
               </div>
             </li>
@@ -465,7 +485,7 @@ img { max-width: 100%; }
         <figure class="fig map">
           <div class="frame">
             <img src="img/carte-eoliennes.jpg"
-                 alt="Vue aérienne entre Gaurain-Ramecroix, Barry et Vezon avec l'emplacement des huit éoliennes : n° 2, 4, 5 et 6 en vert, n° 1, 7 et 8 en orange, n° 3 barrée en rouge"
+                 alt="Vue aérienne entre Gaurain-Ramecroix, Barry et Vezon avec l'emplacement des huit éoliennes&nbsp;: n° 2, 4, 5 et 6 en vert, n° 1, 7 et 8 en orange, n° 3 barrée en rouge"
                  width="810" height="702">
           </div>
           <figcaption>
@@ -486,7 +506,7 @@ img { max-width: 100%; }
 
         <figure class="fig">
           <svg class="scale" viewBox="0 0 520 290" role="img"
-               aria-label="Comparaison à l'échelle : une éolienne de 230 mètres à côté des clochers de la cathédrale de Tournai, d'environ 83 mètres">
+               aria-label="Comparaison à l'échelle&nbsp;: une éolienne de 230 mètres à côté des clochers de la cathédrale de Tournai, d'environ 83 mètres">
 
             <g stroke="var(--line)" stroke-width="1" stroke-dasharray="4 4">
               <line x1="20" y1="34" x2="500" y2="34"/>
@@ -548,110 +568,136 @@ img { max-width: 100%; }
 
       <ol class="timeline">
         <li>
-          <span class="when">16 octobre 2023</span>
+          <span class="when">OCTOBRE&nbsp;2023 – AOÛT&nbsp;2025</span>
           <span class="node" aria-hidden="true"></span>
           <div class="what">
-            <h3>Réunion d'information préalable</h3>
-            <p>
-              Les porteurs du projet présentent le parc de huit éoliennes aux habitants.
-              C'est le point de départ de la procédure.
+            <h3>Présentation du projet et étude d’incidences</h3>
+            <p>Le 16 octobre 2023, lors de la réunion d’information préalable (RIP), CCB et IPALLE présentent leur projet de <b>huit éoliennes</b>, alors annoncées à <b>200&nbsp;mètres de hauteur</b>, entre les villages de Barry et Vezon, en <b>milieu&nbsp;forestier et agricole</b>. <small>[RID, pp. 31–33]</small></p>
+            <p>La présentation met l’accent sur les objectifs du projet&nbsp;: couvrir par <b>autoconsommation</b> environ <b>30 % des besoins électriques de la cimenterie CCB</b>, contribuer à sa <b>décarbonation</b> et à sa <b>compétitivité</b>.</p>
+            <p>Elle souligne également les atouts du site de Barry-Vezon pour l’implantation d’éoliennes, notamment du fait de son classement en <b>zone de dépendances d’extraction au plan de secteur</b>. <small>[RID, pp. 18–29, 31–33 ; RIT, p. 8]</small></p>
+            <p>La réunion attire une salle comble et suscite de <b>nombreuses questions sur les incidences potentielles du projet</b>, notamment pour les habitants, le paysage et la biodiversité. Ces incidences doivent encore être évaluées dans le cadre de l’étude d’incidences sur l’environnement (EIE). <small>[RID, pp. 34–60]</small></p>
+          </div>
+        </li>
+
+        <li>
+          <span class="when">AOÛT&nbsp;2025 – FÉVRIER&nbsp;2026</span>
+          <span class="node" aria-hidden="true"></span>
+          <div class="what">
+            <h3>Demande de permis et enquête publique</h3>
+            <p>Le 26 août 2025, les sociétés CCB et IPALLE demandent un permis pour <b>huit éoliennes de 230 mètres</b>.</p>
+            <p>L'EIE met notamment en évidence l’implantation du projet, d’une part, au sein et aux abords du bois de Barry, une <b>forêt ancienne de feuillus à haute valeur écologique</b>, et, d’autre part, dans un <b>Périmètre d’Intérêt Paysager (PIP)</b> que l’ADESA décrit comme un paysage qui «&nbsp;semble avoir été épargné de toute atteinte&nbsp;». <small>[EIE, pp. 133–134, 387–389, 405]</small></p>
+            <p>Les <b>contraintes biologiques, paysagères et humaines</b> sont considérables. L’enquête publique recueille <b>59 remarques écrites</b> et une <b>pétition de 398 signatures</b> contre le projet ; les <b>avis officiels</b> oscillent entre <b>accords sous conditions, réserves et refus</b>. <small>[DMR, pp. 3–11]</small></p>
+            <p>Parallèlement, le 27 novembre 2025, <b>alors que l’instruction est toujours en cours</b>, le Gouvernement wallon accorde <b>plus de 46 millions d’euros d’aides wallonnes et européennes au projet phare CCBeNETZERO, dont le parc éolien fait explicitement partie</b>. <small>[GOW ; COM]</small></p>
+          </div>
+        </li>
+
+        <li>
+          <span class="when">3&nbsp;MARS&nbsp;2026</span>
+          <span class="node" aria-hidden="true"></span>
+          <div class="what">
+            <h3>L’administration décide&nbsp;: quatre éoliennes, pas huit</h3>
+            <p>Le 3 mars 2026, les fonctionnaires technique et délégué rendent leur décision. Face aux bénéfices évidents et aux fortes contraintes, l’administration wallonne opte pour un compromis&nbsp;:</p>
+            <ul>
+              <li><strong>Sur le plan biologique&nbsp;:</strong> l’administration s’aligne sur l’avis <b>«&nbsp;strictement défavorable&nbsp;»</b> du Département de la Nature et des Forêts (DNF). Les implantations forestières sont considérées comme <b>«&nbsp;rédhibitoires&nbsp;»</b> et leurs impacts locaux <b>«&nbsp;non compensables&nbsp;»</b>. <small>[PUP, pp. 47–48 et 71 ; RSR, p. 49]</small></li>
+              <li><strong>Sur le plan paysager et humain&nbsp;:</strong> l’administration reconnaît pleinement les <b>fortes contraintes paysagères</b> et des <b>incidences «&nbsp;majeures&nbsp;»</b> pour les riverains, mais elle les <b>accepte</b> néanmoins. [EIE, p. 357]</li>
+            </ul>
+            <p>Résultat&nbsp;: <b>les quatre éoliennes en milieu forestier sont refusées, les quatre en milieu agricole autorisées</b>. <small>[PUP, p. 86]</small></p>
+            <p><b>Ce compromis ne satisfait personne</b>. Trois <b>recours de riverains</b>, dont un signé par plus de 100 personnes, contestent les quatre éoliennes autorisées. À&nbsp;l’inverse, le <b>recours des demandeurs</b> vise à récupérer les quatre éoliennes refusées. <small>[DMR, pp. 10–11]</small></p>
+            <p><b>L’ensemble de l’arbitrage du 3 mars est donc remis sur la table</b>.</p>
+
             </p>
           </div>
         </li>
 
         <li>
-          <span class="when">Juillet 2025</span>
+          <span class="when">AVRIL&nbsp;2026 – JUILLET&nbsp;2026</span>
           <span class="node" aria-hidden="true"></span>
           <div class="what">
-            <h3>Étude d'incidences sur l'environnement</h3>
-            <p>
-              Un bureau d'études agréé analyse les effets du projet
-              sur la faune, le paysage, le bruit et les habitants.
-            </p>
+            <h3>Instruction des recours et nouveaux avis administratifs</h3>
+            <p>Non seulement le <b>DNF maintient son avis «&nbsp;strictement défavorable&nbsp;»</b> pour les quatre éoliennes forestières refusées, mais il conteste aussi la manière dont l’administration a traité les <b>analyses complémentaires demandées</b>. <small>[RSR, pp. 44–45]</small></p>
+            <p>Dès son premier avis, le DNF avait demandé une analyse préalable des impacts sur les espèces protégées. Or, <b>le permis du 3 mars a été accordé sans disposer de cette analyse</b>. <small>[RSR, pp. 43–44, 47]</small></p>
+            <p>Dans son nouvel avis, le DNF souligne <b>l’enjeu de cette analyse</b>&nbsp;: sans elle, il n’est pas possible de <b>déterminer si le projet aura un impact</b> sur les espèces protégées et, le cas échéant, <b>si cet impact nécessite une dérogation</b> à la Loi sur la Conservation de la Nature. Or, <b>une telle dérogation doit être obtenue avant la délivrance du permis</b>. </small>[RSR, p. 47]</small></p>
+            <p>Le problème change alors de dimension. Il ne s’agit plus seulement d’arbitrer entre les bénéfices du projet et ses incidences environnementales. <b>C’est la possibilité même de délivrer légalement le permis qui est désormais en question</b>.</p>
           </div>
         </li>
 
         <li>
-          <span class="when">Oct.–nov. 2025</span>
+          <span class="when">11&nbsp;AOÛT 2026</span>
           <span class="node" aria-hidden="true"></span>
           <div class="what">
-            <h3>Enquête publique</h3>
-            <p>
-              Les habitants déposent 59 remarques écrites et une pétition
-              de 398 signatures. Le Collège communal de Tournai rend
-              un avis fortement réservé.
-            </p>
-          </div>
-        </li>
-
-        <li>
-          <span class="when">3 mars 2026</span>
-          <span class="node" aria-hidden="true"></span>
-          <div class="what">
-            <h3>Permis de première instance</h3>
-            <p>La Région autorise 4 éoliennes et en refuse 4.</p>
-          </div>
-        </li>
-
-        <li>
-          <span class="when">Avril 2026</span>
-          <span class="node" aria-hidden="true"></span>
-          <div class="what">
-            <h3>Recours auprès du Gouvernement wallon</h3>
-            <p>
-              Plusieurs recours sont introduits contre ce permis,
-              dont un porté par 106 riverains.
-            </p>
+            <h3>Rapport de synthèse sur recours&nbsp;: refus préconisé</h3>
+            <p>Le 11 août, l’administration wallonne chargée de l’instruction des recours rend ses conclusions au ministre&nbsp;: </p>
+            <p><strong>«&nbsp;Légalement, il n'est donc pas possible de délivrer le permis unique sollicité dans l'état actuel du dossier.&nbsp;»</strong> <small>[RSR, p. 7]</small></p>
+            <p><strong>«&nbsp;Sur la base des éléments recueillis lors de l'instruction […], les fonctionnaires technique et délégué compétents sur recours proposent à Monsieur le Ministre d'INFIRMER la décision querellée et de REFUSER le permis sollicité.&nbsp;»</strong> <small>[RSR, p. 7]</small></p>
+            <p>Le ministre dispose de trente jours pour statuer.</p>
           </div>
         </li>
 
         <li class="key">
-          <span class="when">Septembre 2026</span>
+          <span class="when">4&nbsp;SEPTEMBRE 2026</span>
           <span class="node" aria-hidden="true"></span>
           <div class="what">
-            <h3>Décision du Ministre sur recours</h3>
-            <p>
-              Le Ministre autorise 7 éoliennes sur 8.
-              Seule l'éolienne n°&nbsp;3 reste refusée.
-            </p>
+            <h3>Décision ministérielle&nbsp;: sept éoliennes pour CCB</h3>
+            <p>Le 4 septembre 2026, le ministre François Desquesnes autorise sept des huit éoliennes demandées, malgré la proposition de refus formulée par l’administration wallonne. <small>[DMR, p. 95]</small></p>
+            <p>Pour motiver sa décision, le ministre retient une appréciation différente de celle de l’administration sur plusieurs points essentiels&nbsp;:</p>
+            <ul>
+              <li><strong>Analyses complémentaires sur les espèces protégées&nbsp;:</strong> alors que le DNF les juge nécessaires, le ministre considère que <b>l’étude d’incidences contient suffisamment d’éléments pour statuer</b>. <small>[DMR, pp. 50–52]</small></li>
+              <li><strong>Chauves-souris&nbsp;:</strong> alors que les incidences des éoliennes forestières avaient été jugées non compensables, le ministre estime que <b>le bridage et les mesures de compensation permettent de maîtriser suffisamment les impacts</b>. <small>[DMR, pp. 52–54]</small></li>
+              <li><strong>Dérogation à la Loi sur la Conservation de la Nature&nbsp;:</strong> le ministre considère que <b>les mesures prévues permettent d’éviter la nécessité d’une dérogation</b>. <small>[DMR, pp. 50–52, 94]</small></li>
+              <li><strong>Évaluation des incidences environnementales&nbsp;:</strong> le ministre prend en compte un <b>«&nbsp;état environnemental futur&nbsp;»</b> susceptible de résulter du développement de la carrière, ce qui conduit <b>à relativiser les incidences du projet</b> sur les milieux existants. [<small>DMR, pp. 53–54]</small></li>
+            </ul>
           </div>
         </li>
 
         <li>
-          <span class="when">28 septembre 2026</span>
+          <span class="when">9&nbsp;SEPTEMBRE 2026</span>
           <span class="node" aria-hidden="true"></span>
           <div class="what">
-            <h3>Réunion d'information des habitants</h3>
-            <p>
-              Les riverains se réunissent pour faire le point sur la décision
-              et décider ensemble de la suite.
-            </p>
+            <h3>Le ministre défend sa décision sur Notélé</h3>
+            <p>Cinq jours après sa décision, François Desquesnes présente publiquement les arguments qui ont motivé son arbitrage.</p>
+            <p>Il invoque la <strong>«&nbsp;cohérence particulière&nbsp;»</strong> du projet au regard du <strong>«&nbsp;caractère&nbsp;industriel&nbsp;»</strong> du site et de son <strong>«&nbsp;évolution future&nbsp;»</strong>, les adaptations destinées à réduire les incidences sur les espèces protégées, ainsi que la contribution du parc à la décarbonation de l’industrie wallonne. Selon le ministre, sa décision reflète une <strong>«&nbsp;approche de proportionnalité et d’équilibre&nbsp;»</strong> entre production d’énergie renouvelable et contraintes environnementales. [NOT]</p>
           </div>
         </li>
+
+        <li>
+          <span class="when">28&nbsp;SEPTEMBRE 2026</span>
+          <span class="node" aria-hidden="true"></span>
+          <div class="what">
+            <h3>Les habitants des villages concernés se concertent</h3>
+            <p>Les habitants des villages concernés se réunissent pour faire le point sur la décision ministérielle et examiner les suites à donner au dossier, notamment la possibilité d’un recours devant le Conseil d’État.</p>
+          </div>
+        </li>
+
+        <li>
+          <span class="when">28&nbsp;OCTOBRE 2026</span>
+          <span class="node" aria-hidden="true"></span>
+          <div class="what">
+            <h3>La Ville de Tournai décide de soutenir les riverains</h3>
+            <p>Le 28 octobre, le collège communal de Tournai décide, à la majorité, d’<b>intervenir devant le Conseil d’État en cas de recours de riverains</b>.</p>
+            <p>Dans son avis « fortement réservé » du 29 janvier 2026, la Ville soulignait notamment les <b>incidences environnementales importantes</b> du projet.</p>
+            <p>Cependant, dans sa communication actuelle, la Ville met principalement l’accent sur les <b>nuisances pour les habitants</b>, sans expliquer pourquoi <b>les&nbsp;préoccupations environnementales, pourtant toujours d’actualité, ne&nbsp;sont plus évoquées</b>. [NOT]</p>
+          </div>
+        </li>
+
+         <li>
+          <span class="when">5&nbsp;NOVEMBRE 2026</span>
+          <span class="node" aria-hidden="true"></span>
+          <div class="what">
+            <h3>Le Comité saisit le Conseil d’État</h3>
+            <p>Le Comité des Villages entre Bois et Plaine (ASBL) introduit un <b>recours en annulation devant le Conseil d’État</b> contre la décision ministérielle autorisant sept éoliennes à Barry-Vezon.</p>
+            <p><strong>Ce recours vise à contester la légalité de l’autorisation, notamment au regard des objections environnementales et juridiques soulevées au cours de la procédure.</strong></p>
+          </div>
+        </li>
+
+
 
         <li class="now">
-          <span class="when">Octobre 2026</span>
+          <span class="when">&nbsp;</span>
           <span class="node" aria-hidden="true"></span>
           <div class="what">
-            <span class="tag-now">En cours</span>
-            <h3>Naissance du Comité des villages</h3>
-            <p>
-              Les habitants de Barry, Gaurain-Ramecroix, Vezon,
-              Baugnies et Wasmes-Audemez-Briffœil créent leur comité
-              de villages, pour agir dans la durée sur ce dossier et sur les autres.
-            </p>
-          </div>
-        </li>
-
-        <li class="next">
-          <span class="when">À venir</span>
-          <span class="node" aria-hidden="true"></span>
-          <div class="what">
-            <h3>Prochaines étapes</h3>
-            <p>
-              Nous publierons ici chaque nouvelle étape
-              et informerons nos membres en priorité.
-            </p>
+            <h3>Une nouvelle étape s’ouvre&nbsp;: <br/>celle du contrôle juridictionnel de la décision ministérielle.</h3>
+            
+            <p></p>
           </div>
         </li>
       </ol>
@@ -661,37 +707,26 @@ img { max-width: 100%; }
   <section id="actions">
     <div class="wrap">
       <div class="head">
-        <span class="label">Activités en cours</span>
-        <h2>Ce que nous faisons maintenant</h2>
-        <p>
-          Le travail est réparti entre bénévoles,
-          chacun selon ses compétences et sa connaissance du terrain.
-        </p>
+        <span class="label">Au quotidien</span>
+        <h2>	Observer, comprendre, agir</h2>
+        <p>Nos actions associent recherches, démarches juridiques, information des habitants et veille sur l’évolution de notre territoire.</p>
       </div>
 
       <div class="acts">
         <article class="act">
           <div class="act-top">
-            <h3>Étude du dossier</h3>
+            <h3>Recours devant le Conseil d’État</h3>
             <span class="pill run">En cours</span>
           </div>
-          <p>
-            Des groupes de travail examinent le dossier sous tous ses angles&nbsp;:
-            chauves-souris, oiseaux et haies, eau et sources,
-            santé, paysage et carrière.
-          </p>
+          <p>Le Comité introduit un recours en annulation contre l’autorisation des sept éoliennes, afin de faire examiner la légalité de la décision ministérielle. </p>
         </article>
 
         <article class="act">
           <div class="act-top">
-            <h3>Création de l'ASBL</h3>
-            <span class="pill perm">Constituée</span>
+            <h3>Analyse et recherches</h3>
+            <span class="pill perm">En cours</span>
           </div>
-          <p>
-            L'ASBL est constituée (n° d'entreprise 1044.404.047).
-            Elle peut représenter les habitants de nos cinq villages
-            dans la durée et gérer les fonds en toute transparence.
-          </p>
+          <p>Nos groupes de travail approfondissent les enjeux du territoire : biodiversité, eau, paysage, santé, carrière et aménagement du territoire.</p>
         </article>
 
         <article class="act">
@@ -699,10 +734,7 @@ img { max-width: 100%; }
             <h3>Information des habitants</h3>
             <span class="pill perm">Permanent</span>
           </div>
-          <p>
-            Réunions ouvertes à tous, toutes-boîtes et ce site,
-            pour que chacun dispose d'une information claire et vérifiée.
-          </p>
+          <p>Réunions, toutes-boîtes et site internet : nous partageons les informations, les documents et les avancées de nos recherches. </p>
         </article>
 
         <article class="act">
@@ -710,14 +742,11 @@ img { max-width: 100%; }
             <h3>Veille sur le terrain</h3>
             <span class="pill perm">Permanent</span>
           </div>
-          <p>
-            Nous restons attentifs à l'évolution du site et à tout démarrage de travaux.
-            Si vous remarquez quelque chose, écrivez-nous.
-          </p>
+          <p>Nous suivons l’évolution des projets et des travaux susceptibles d’affecter notre territoire. Vos observations sur le terrain sont les bienvenues.</p>
         </article>
       </div>
 
-      <p class="updated">Dernière mise à jour&nbsp;: 17 octobre 2026</p>
+      <p class="updated">Dernière mise à jour&nbsp;: 5 novembre 2026</p>
     </div>
   </section>
 </main>
@@ -726,7 +755,7 @@ img { max-width: 100%; }
   <div class="wrap">
     <h2>Suivre ce dossier demande du temps et des moyens.</h2>
     <a class="btn btn-dark" href="index.html#rejoindre">
-      Participer &amp; soutenir
+      Participer & soutenir
     </a>
   </div>
 </div>
@@ -734,7 +763,7 @@ img { max-width: 100%; }
 <footer>
   <div class="wrap">
     <div class="legal">
-      <strong>Comité des villages entre Bois et Plaine ASBL</strong>
+      <b>Comité des villages entre Bois et Plaine ASBL</b>
       <span>Siège&nbsp;: rue Albert Ier 51ter, 7538 Vezon</span>
       <span>E-mail&nbsp;: contact@entreboisetplaine.be</span>
       <span>N° d'entreprise&nbsp;: 1044.404.047 · RPM Hainaut, division Tournai</span>
