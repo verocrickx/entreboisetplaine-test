@@ -122,7 +122,8 @@ section{padding-block:72px}
 #territoire{background:var(--bg);color:var(--muted)}
 #dossiers{background:var(--field);color:var(--ink)}
 #rejoindre{background:var(--bg);color:var(--muted)}
-#contact{background:var(--surface);color:var(--ink)}
+#soutenir{padding-top:0}
+#contact{background:var(--field);color:var(--ink)}
 
 
 .head{display:grid;gap:12px;max-width:65ch;margin-bottom:40px}
